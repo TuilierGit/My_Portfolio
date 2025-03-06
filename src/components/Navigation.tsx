@@ -10,7 +10,6 @@ const Navigation = ({ transition = false }: Props) => {
 
   useEffect(() => {
     setTimeout(() => {
-      console.log("Ajout de la classe visible !");
       setVisible(true);
     }, 500);
   }, []);

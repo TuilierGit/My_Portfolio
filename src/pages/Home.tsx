@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import Footer from "../components/Footer";
 import Navigation from "../components/Navigation";
 
 const Home = () => {
@@ -54,6 +55,7 @@ const Home = () => {
           <img src="photo.jpg" alt="Ma photo" />
         </div>
       </div>
+      <Footer />
     </div>
   );
 };

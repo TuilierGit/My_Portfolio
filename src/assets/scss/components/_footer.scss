@@ -1,0 +1,31 @@
+@use "../settings" as *;
+
+.footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  height: 250px;
+
+  div {
+    border: solid 1px $border-color;
+    padding: 25px;
+
+    h4 {
+      color: $color-1;
+      font-size: 1em;
+    }
+
+    ul {
+      padding-left: 0;
+
+      a {
+        text-decoration: none;
+        align-content: center;
+        color: black;
+      }
+
+      a:hover {
+        text-decoration: underline black;
+      }
+    }
+  }
+}
