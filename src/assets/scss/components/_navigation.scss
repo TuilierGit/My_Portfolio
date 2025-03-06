@@ -1,0 +1,41 @@
+@use "../settings" as *;
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+
+  height: auto;
+  max-width: 1230px;
+  width: 100%;
+  border: solid 1px $border-color;
+
+  .navigation-img {
+    padding: 10px;
+    margin: 0 0 0 8px;
+  }
+
+  ul {
+    display: flex;
+    height: 64px;
+    gap: 40px;
+    padding: 0px 20px 0px 0px;
+
+    .nav-active li {
+      color: black;
+      text-decoration: underline;
+    }
+
+    a {
+      text-decoration: none;
+      align-content: center;
+
+      li {
+        color: $color-1;
+      }
+    }
+
+    a:hover {
+      text-decoration: underline $color-1;
+    }
+  }
+}
