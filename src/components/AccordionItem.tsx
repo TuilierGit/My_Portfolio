@@ -1,9 +1,7 @@
-import { ReactNode } from "react";
-
 interface Props {
   id: number;
   accordionTitle: string;
-  accordionBody: ReactNode;
+  accordionBody: string;
   isSelected: boolean;
   onSelectItem: (index: number) => void;
 }
@@ -40,7 +38,10 @@ const AccordionItem = ({
         }
         data-bs-parent="#accordionExample"
       >
-        <div className="accordion-body">{accordionBody}</div>
+        <div
+          className="accordion-body"
+          dangerouslySetInnerHTML={{ __html: accordionBody }}
+        ></div>
       </div>
     </div>
   );

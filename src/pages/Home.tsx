@@ -19,7 +19,7 @@ const Home = () => {
   return (
     <div className="page" style={{ minHeight: "100vh" }}>
       <Navigation transition={true} />
-      <div className="presentation-container home-presentation">
+      <div className="page-container home-presentation">
         <div
           id="left-presentation"
           className={

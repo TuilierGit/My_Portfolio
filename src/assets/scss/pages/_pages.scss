@@ -1,16 +1,17 @@
 @use "../settings" as *;
 
-.presentation-container {
-  padding: 0 40px;
-  margin: 100px auto;
-  width: 70%;
-}
-
 .page {
   display: block;
   width: 1232px;
   min-height: 100vh;
+  background: $white;
   border: solid 1px $border-color;
+
+  .page-container {
+    padding: 0 40px;
+    margin: 100px auto;
+    width: 70%;
+  }
 
   img.site-logo {
     width: 40px;
