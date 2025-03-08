@@ -1,0 +1,14 @@
+.tag {
+  background-color: rgb(247, 247, 247);
+  border-radius: 60px;
+  opacity: 1;
+  width: fit-content;
+  height: fit-content;
+  padding: 5px 15px;
+}
+
+.tag-list {
+  display: flex;
+  flex-direction: row;
+  gap: 25px;
+}

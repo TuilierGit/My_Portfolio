@@ -1,0 +1,101 @@
+.github-button {
+  background: black;
+  color: white;
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  border-radius: 50px;
+  width: fit-content;
+  transition: 0.2s;
+}
+
+.github-button:not(:disabled):hover,
+.github-button:not(:disabled):focus {
+  outline: 0;
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.4), 0 3px 8px 0 rgba(0, 0, 0, 0.3);
+}
+
+// ----------------------- STRONG BUTTON ---------------------------------
+
+.strong-button {
+  appearance: none;
+  background-color: #000000;
+  border: 2px solid #1a1a1a;
+  border-radius: 15px;
+  box-sizing: border-box;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Roobert, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica,
+    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 16px;
+  font-weight: 600;
+  line-height: normal;
+  margin: 0;
+  min-height: 60px;
+  min-width: 0;
+  outline: none;
+  padding: 16px 24px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 300ms cubic-bezier(0.23, 1, 0.32, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  // width: 100%;
+  will-change: transform;
+}
+
+.strong-button:disabled {
+  pointer-events: none;
+}
+
+.strong-button:hover {
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  transform: translateY(-2px);
+}
+
+.strong-button:active {
+  box-shadow: none;
+  transform: translateY(0);
+}
+
+// ----------------------- STRONG BUTTON ---------------------------------
+
+/* CSS */
+.game-button {
+  background-color: #fff000;
+  border-radius: 12px;
+  color: #000;
+  cursor: pointer;
+  font-weight: bold;
+  padding: 10px 15px;
+  text-align: center;
+  transition: 200ms;
+  width: fit-content;
+  box-sizing: border-box;
+  border: 0;
+  font-size: 16px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  text-decoration: none;
+
+  svg {
+    margin: 0 10px 0 0;
+    transform: translate(-5%, -5%);
+  }
+}
+
+.game-button:not(:disabled):hover,
+.game-button:not(:disabled):focus {
+  outline: 0;
+  background: #f4e603;
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.2), 0 3px 8px 0 rgba(0, 0, 0, 0.15);
+}
+
+.game-button:disabled {
+  filter: saturate(0.2) opacity(0.5);
+  -webkit-filter: saturate(0.2) opacity(0.5);
+  cursor: not-allowed;
+}
