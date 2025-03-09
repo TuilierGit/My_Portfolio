@@ -1,8 +1,7 @@
 # Mon Portfolio
 
-**Auteur** :
-
-- Tuilier Thomas
+**Auteur** : Tuilier Thomas
+**Version** : 1.0
 
 ## Description
 
