@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import Footer from "../components/Footer";
 import Navigation from "../components/Navigation";
+import Strong from "../components/buttons/Strong";
 
 const Home = () => {
   const [visiblePresentation, setVisiblePresentation] = useState(false);
@@ -39,9 +40,10 @@ const Home = () => {
             </p>
           </div>
           <div>
-            <a href="mailto:thomas.tuilier@gmail.com">
-              <button className="strong-button">Contactez-moi</button>
-            </a>
+            <Strong
+              url="mailto:thomas.tuilier@gmail.com"
+              text="Contactez-moi"
+            />
           </div>
         </div>
 

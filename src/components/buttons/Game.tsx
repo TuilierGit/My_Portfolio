@@ -3,15 +3,16 @@ import { IoGameController } from "react-icons/io5";
 
 interface Props {
   url: string;
+  text?: string;
 }
 
-const Game = ({ url }: Props) => {
+const Game = ({ url, text }: Props) => {
   return (
     <a className="game-button" role="button" href={url} target="_blank">
       <IconContext.Provider value={{ color: "black", size: "30px" }}>
         <IoGameController />
       </IconContext.Provider>
-      Jouer
+      {text ? text : "Jouer"}
     </a>
   );
 };

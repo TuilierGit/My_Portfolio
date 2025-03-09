@@ -1,37 +1,73 @@
-import Game from "./buttons/Game";
-import Github from "./buttons/Github";
+import Button from "./Button";
+import { ProjectButton } from "./Projects";
 import Tag from "./Tag";
 
-const Project = () => {
+interface Props {
+  title: string;
+  tags: string[];
+  body: string;
+  mediaUrl: string;
+  mediaType: string;
+  buttons: ProjectButton[];
+}
+
+const Project = ({
+  title,
+  tags,
+  body,
+  mediaUrl,
+  mediaType,
+  buttons,
+}: Props) => {
   return (
     <div className="project">
-      <h2>Nom du projet</h2>
-
       <div className="project-container">
         <div className="left">
-          <div className="tag-list">
-            <Tag content="HTML" />
-            <Tag content="CSS" />
-            <Tag content="JavaScript" />
-          </div>
+          <h2>{title}</h2>
+          <div className="presentation">
+            <div className="tag-list">
+              {tags.map((tag) => (
+                <Tag content={tag} />
+              ))}
+            </div>
 
-          <div>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti
-            culpa id ab optio voluptate in laborum ad minima. Doloremque
-            quibusdam enim consequatur recusandae explicabo ullam odio esse
-            accusantium magni? Esse officiis laudantium quo culpa praesentium
-            dolorum aliquid repellat, soluta atque quod incidunt est saepe
-            voluptatibus odio reiciendis dolore corporis possimus!
-          </div>
+            <div
+              className="text"
+              dangerouslySetInnerHTML={{ __html: body }}
+            ></div>
 
-          <div className="button-list">
-            <Github url="https://github.com/TuilierGit/bubble-game/tree/main" />
-            <Game url="https://tuiliergit.github.io/bubble-game/" />
+            <div className="button-list">
+              {buttons.map((buttonItem) => (
+                <Button
+                  type={buttonItem.type}
+                  text={buttonItem.text}
+                  url={buttonItem.url}
+                />
+              ))}
+            </div>
           </div>
         </div>
 
         <div className="right">
-          <div className="project-img"></div>
+          <div className="project-media">
+            {mediaType.toLowerCase() === "img" ? (
+              <img src={mediaUrl} alt={"Image de " + title} className="media" />
+            ) : mediaType.toLowerCase() === "video" ? (
+              <video
+                id="banner-video"
+                className="media"
+                autoPlay
+                muted
+                playsInline
+                loop
+              >
+                <source src={mediaUrl} type="video/webm" />
+                Your browser does not support the video tag.
+              </video>
+            ) : (
+              "Erreur sur la description du projet"
+            )}
+          </div>
         </div>
       </div>
     </div>

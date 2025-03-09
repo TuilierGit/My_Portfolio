@@ -44,8 +44,8 @@ const Footer = () => {
       </div>
       <div>
         <p>© 2025 Tuilier Thomas.</p>
-        <p>All Rights Reserved.</p>
-        <p>Le design de ce site est inspiré de celui de Jay Park.</p>
+        <p>Tous droits réservés.</p>
+        <p>Site fait par mes soins.</p>
       </div>
     </div>
   );
