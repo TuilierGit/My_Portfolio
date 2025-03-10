@@ -3,47 +3,96 @@
 .project {
   border: solid 1px $border-color;
   margin: 50px;
-  padding: 50px 100px;
-  border-radius: 50px;
-  height: 630px;
+
   transition: 0.3s;
 
+  @media (min-width: 1251px) {
+    height: 630px;
+    padding: 50px 100px;
+    border-radius: 50px;
+  }
+
+  @media (max-width: 1250px) {
+    padding: 20px 30px;
+    border-radius: 20px;
+    text-align: center;
+  }
+
   .project-container {
-    display: grid;
-    grid-template-columns: 3fr 2fr;
-    height: 450px;
+    @media (min-width: 1251px) {
+      display: grid;
+      grid-template-columns: 3fr 2fr;
+      height: 450px;
+    }
 
     a {
       color: black;
     }
 
     .left {
+      @media (max-width: 1250px) {
+        display: flex;
+        flex-direction: column;
+        height: fit-content;
+      }
+
       h2 {
-        font-size: 3rem;
         font-weight: 600;
         margin: 0 0 30px 0;
+
+        @media (min-width: 1251px) {
+          font-size: 3rem;
+        }
+
+        @media (max-width: 1250px) {
+          font-size: 2rem;
+        }
       }
 
       .presentation {
-        display: grid;
-        grid-template-rows: 2fr 4fr 2fr;
-        padding-bottom: 60px;
         height: 100%;
 
+        @media (min-width: 1251px) {
+          padding-bottom: 60px;
+          display: grid;
+          grid-template-rows: 2fr 4fr 2fr;
+        }
+
+        @media (max-width: 1250px) {
+          padding-bottom: 20px;
+          gap: 20px;
+          display: flex;
+          flex-direction: column;
+        }
+
         .text {
-          margin: 0 60px 0 5px;
+          @media (min-width: 1251px) {
+            margin: 0 60px 0 5px;
+          }
         }
 
         .button-list {
           display: flex;
           align-items: center;
           gap: 30px;
-          padding: 0 0 0 30px;
+          flex-wrap: wrap;
+
+          @media (min-width: 1251px) {
+            padding: 0 0 0 30px;
+          }
+
+          @media (max-width: 1250px) {
+            justify-content: center;
+          }
         }
       }
     }
 
     .right {
+      @media (max-width: 1250px) {
+        display: none;
+      }
+
       .project-media {
         width: 450px;
         height: 450px;

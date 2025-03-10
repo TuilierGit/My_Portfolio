@@ -1,10 +1,18 @@
 @use "../settings" as *;
 
 .footer {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  height: 250px;
   background: $color-2;
+
+  @media (min-width: 1251px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    height: 250px;
+  }
+
+  @media (max-width: 1250px) {
+    display: flex;
+    flex-direction: column;
+  }
 
   div {
     border: solid 1px $border-color;

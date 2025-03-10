@@ -20,7 +20,7 @@ const Project = ({
   buttons,
 }: Props) => {
   return (
-    <div className="project">
+    <div className="project" id={title.replace(/ /g, "")}>
       <div className="project-container">
         <div className="left">
           <h2>{title}</h2>

@@ -25,7 +25,7 @@ const Navigation = ({ transition = false }: Props) => {
       }
     >
       <div className="navigation-img">
-        <img className="site-logo" src="logo.png" alt="logo du site" />
+        <img className="site-logo" src="/logo.png" alt="logo du site" />
       </div>
       <ul>
         <NavLink

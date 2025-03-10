@@ -2,15 +2,30 @@
 
 .page {
   display: block;
-  width: 1232px;
   min-height: 100vh;
   background: $white;
   border: solid 1px $border-color;
+  border-bottom: 0;
+
+  @media (min-width: 1251px) {
+    width: 1232px;
+  }
+
+  @media (max-width: 1250px) {
+    width: 100%;
+  }
 
   .page-container {
-    padding: 0 40px;
     margin: 100px auto;
-    width: 70%;
+
+    @media (min-width: 1251px) {
+      padding: 0 40px;
+      width: 70%;
+    }
+
+    @media (max-width: 1251px) {
+      width: 85%;
+    }
   }
 
   img.site-logo {

@@ -39,7 +39,10 @@ $border-color: #ebebeb;
 body {
   background: linear-gradient($white, $color-2);
   font-family: $font-1;
-  @include verticalCenter;
+
+  @media (min-width: 1251px) {
+    @include verticalCenter;
+  }
 }
 
 li {

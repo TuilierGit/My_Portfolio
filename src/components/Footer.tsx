@@ -1,5 +1,4 @@
 import { VscChevronRight } from "react-icons/vsc";
-import { NavLink } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -8,12 +7,12 @@ const Footer = () => {
       <div>
         <h4>Projets</h4>
         <ul>
-          <NavLink to={"/projects/portfolio"}>
+          <a href="https://github.com/TuilierGit/My_Portfolio" target="_blank">
             <li>
               <VscChevronRight />
               Mon portfolio
             </li>
-          </NavLink>
+          </a>
         </ul>
       </div>
       <div>
