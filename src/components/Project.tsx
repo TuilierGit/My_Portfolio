@@ -5,6 +5,7 @@ import Tag from "./Tag";
 interface Props {
   title: string;
   tags: string[];
+  url: string;
   body: string;
   mediaUrl: string;
   mediaType: string;
@@ -14,6 +15,7 @@ interface Props {
 const Project = ({
   title,
   tags,
+  url,
   body,
   mediaUrl,
   mediaType,
@@ -27,7 +29,7 @@ const Project = ({
           <div className="presentation">
             <div className="tag-list">
               {tags.map((tag) => (
-                <Tag content={tag} />
+                <Tag key={tag} content={tag} />
               ))}
             </div>
 
@@ -49,10 +51,23 @@ const Project = ({
         </div>
 
         <div className="right">
-          <div className="project-media">
-            {mediaType.toLowerCase() === "img" ? (
-              <img src={mediaUrl} alt={"Image de " + title} className="media" />
-            ) : mediaType.toLowerCase() === "video" ? (
+          {/* <div className="project-media"> */}
+          {mediaType.toLowerCase() === "img" ? (
+            <a
+              href={url}
+              className="project-media"
+              style={{ background: `url(${mediaUrl}) center/cover` }}
+              target="blank"
+            >
+              {/* <img
+              
+                  src={mediaUrl}
+                  alt={"Image de " + title}
+                  className="media"
+                /> */}
+            </a>
+          ) : mediaType.toLowerCase() === "video" ? (
+            <a className="project-media" href={url} target="blank">
               <video
                 id="banner-video"
                 className="media"
@@ -64,10 +79,13 @@ const Project = ({
                 <source src={mediaUrl} type="video/webm" />
                 Your browser does not support the video tag.
               </video>
-            ) : (
+            </a>
+          ) : (
+            <div className="project-media">
               "Erreur sur la description du projet"
-            )}
-          </div>
+            </div>
+          )}
+          {/* </div> */}
         </div>
       </div>
     </div>

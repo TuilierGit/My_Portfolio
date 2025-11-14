@@ -8,7 +8,7 @@ interface Props {
 
 const Game = ({ url, text }: Props) => {
   return (
-    <a className="game-button" role="button" href={url} target="_blank">
+    <a className="game-button button" role="button" href={url} target="_blank">
       <IconContext.Provider value={{ color: "black", size: "30px" }}>
         <IoGameController />
       </IconContext.Provider>

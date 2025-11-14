@@ -1,6 +1,8 @@
+import DefaultButton from "./buttons/DefaultButton";
 import Game from "./buttons/Game";
 import Github from "./buttons/Github";
 import Strong from "./buttons/Strong";
+import Tool from "./buttons/Tool";
 
 interface Props {
   type: string;
@@ -9,19 +11,18 @@ interface Props {
 }
 
 const Button = ({ type, text, url }: Props) => {
-  if (type.toLowerCase() === "github") {
-    return <Github url={url} />;
-  } else if (type.toLowerCase() === "game") {
-    return <Game url={url} text={text} />;
-  } else if (type.toLowerCase() === "strong") {
-    return <Strong url={url} text={text} />;
+  switch (type.toLowerCase()) {
+    case "github":
+      return <Github url={url} />;
+    case "game":
+      return <Game url={url} text={text} />;
+    case "tool":
+      return <Tool url={url} text={text} />;
+    case "strong":
+      return <Strong url={url} text={text} />;
+    default:
+      return <DefaultButton url={url} text={text} />;
   }
-
-  return (
-    <a href={url}>
-      <button className={type}>{text}</button>
-    </a>
-  );
 };
 
 export default Button;

@@ -10,6 +10,7 @@ export interface Project {
   id: number;
   title: string;
   tags: string[];
+  url: string;
   body: string;
   mediaUrl: string;
   mediaType: string;
@@ -27,8 +28,10 @@ const Projects = ({ projects }: Props) => {
         .sort((a, b) => b.id - a.id)
         .map((project) => (
           <Project
+            key={project.id}
             title={project.title}
             tags={project.tags}
+            url={project.url}
             mediaUrl={project.mediaUrl}
             mediaType={project.mediaType}
             body={project.body}

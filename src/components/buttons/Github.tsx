@@ -7,7 +7,7 @@ interface Props {
 
 const Github = ({ url }: Props) => {
   return (
-    <a className="github-button" href={url} target="_blank">
+    <a className="github-button button" href={url} target="_blank">
       <IconContext.Provider value={{ color: "white", size: "35px" }}>
         <div>
           <VscGithubInverted />

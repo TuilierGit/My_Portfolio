@@ -6,7 +6,7 @@ interface Props {
 const Strong = ({ url, text }: Props) => {
   return (
     <a href={url}>
-      <button className="strong-button">{text}</button>
+      <button className="strong-button button">{text}</button>
     </a>
   );
 };

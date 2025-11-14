@@ -36,6 +36,11 @@ $border-color: #ebebeb;
   scrollbar-color: unset !important;
 }
 
+*::selection {
+  background: black;
+  color: white;
+}
+
 body {
   background: linear-gradient($white, $color-2);
   font-family: $font-1;
