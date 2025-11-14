@@ -148,7 +148,7 @@ const LabProjects = [
     id: 0,
     title: "Suite ...",
     tags: [],
-    url: "https://tuilier-thomas.netlify.app",
+    url: "https://github.com/TuilierGit",
     body: `Intéressé pour découvrir d’autres projets ? N’hésitez pas à visiter mon GitHub, où vous trouverez de nombreux travaux tout aussi intéressants.`,
     mediaUrl: "./projects/github.png",
     mediaType: "img",
