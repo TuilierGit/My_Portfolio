@@ -7,6 +7,76 @@ const projectButtons = {
       url: "https://github.com/TuilierGit/My_Portfolio",
     },
   ],
+  Quiz: [
+    {
+      id: 1,
+      type: "github",
+      text: "",
+      url: "https://github.com/TuilierGit/Quiz",
+    },
+    {
+      id: 2,
+      type: "game",
+      text: "",
+      url: "https://tuiliergit.github.io/Quiz",
+    },
+  ],
+  Blablagues: [
+    {
+      id: 1,
+      type: "github",
+      text: "",
+      url: "https://github.com/TuilierGit/Blablagues",
+    },
+    {
+      id: 2,
+      type: "website",
+      text: "",
+      url: "https://tuiliergit.github.io/Blablagues",
+    },
+  ],
+  "Random Color Generator": [
+    {
+      id: 1,
+      type: "github",
+      text: "",
+      url: "https://github.com/TuilierGit/random-color-generator",
+    },
+    {
+      id: 2,
+      type: "tool",
+      text: "",
+      url: "https://tuiliergit.github.io/random-color-generator",
+    },
+  ],
+  "JS Meal App": [
+    {
+      id: 1,
+      type: "github",
+      text: "",
+      url: "https://github.com/TuilierGit/javascript-meal-app",
+    },
+    {
+      id: 2,
+      type: "website",
+      text: "",
+      url: "https://tuiliergit.github.io/javascript-meal-app",
+    },
+  ],
+  "JS Flag App": [
+    {
+      id: 1,
+      type: "github",
+      text: "",
+      url: "https://github.com/TuilierGit/javascript-flag-app",
+    },
+    {
+      id: 2,
+      type: "website",
+      text: "",
+      url: "https://tuiliergit.github.io/javascript-flag-app",
+    },
+  ],
   "Bubble Game": [
     {
       id: 1,
@@ -133,11 +203,25 @@ const projectButtons = {
       url: "https://tuiliergit.github.io/Flappy-Bird",
     },
   ],
+  Tinder: [
+    {
+      id: 1,
+      type: "github",
+      text: "",
+      url: "https://github.com/TuilierGit/tinder",
+    },
+    {
+      id: 2,
+      type: "website",
+      text: "",
+      url: "https://tuiliergit.github.io/tinder",
+    },
+  ],
 };
 
 const LabProjects = [
   {
-    id: 1,
+    id: 10,
     title: "Mon Portfolio",
     tags: ["HTML", "Sass", "TypeScript", "React"],
     url: "https://tuilier-thomas.netlify.app",
@@ -150,7 +234,68 @@ const LabProjects = [
     buttons: projectButtons["Mon Portfolio"],
   },
   {
-    id: 2,
+    id: 11,
+    title: "Quiz",
+    tags: ["HTML", "CSS", "Javascript"],
+    url: "https://tuiliergit.github.io/Quiz",
+    body: `Petite application de quiz réalisée en Vanilla JavaScript.`,
+    mediaUrl: "./projects/project_quiz.png",
+    mediaType: "img",
+    buttons: projectButtons["Quiz"],
+  },
+  {
+    id: 12,
+    title: "Blablagues",
+    tags: ["HTML", "CSS", "Javascript"],
+    url: "https://tuiliergit.github.io/Blablagues",
+    body: `Petite application réalisée en Vanilla JavaScript. 
+    <br>
+    <br> 
+    Elle utilise l’API de blablagues.net pour afficher une nouvelle blague à chaque clic sur la page.
+    `,
+    mediaUrl: "./projects/project_blablagues.png",
+    mediaType: "img",
+    buttons: projectButtons["Blablagues"],
+  },
+  {
+    id: 13,
+    title: "Random Color Generator",
+    tags: ["HTML", "CSS", "Javascript"],
+    url: "https://tuiliergit.github.io/random-color-generator",
+    body: `
+      Petit outil JavaScript pour générer des couleurs aléatoires.
+    `,
+    mediaUrl: "./projects/project_randomColorGenerator.png",
+    mediaType: "img",
+    buttons: projectButtons["Random Color Generator"],
+  },
+  {
+    id: 14,
+    title: "JS Meal App",
+    tags: ["HTML", "CSS", "Javascript"],
+    url: "https://tuiliergit.github.io/javascript-meal-app",
+    body: `
+      Petite application réalisée en Vanilla JavaScript, listant une série de repas ainsi que les ingrédients nécessaires pour les préparer.
+    `,
+    mediaUrl: "./projects/project_mealApp.png",
+    mediaType: "img",
+    buttons: projectButtons["JS Meal App"],
+  },
+  {
+    id: 15,
+    title: "JS Flag App",
+    tags: ["HTML", "CSS", "Javascript"],
+    url: "https://tuiliergit.github.io/javascript-flag-app",
+    body: `
+      Petite application réalisée en Vanilla JavaScript, qui liste les drapeaux du monde.
+    `,
+    mediaUrl: "./projects/project_flagApp.png",
+    mediaType: "img",
+    buttons: projectButtons["JS Flag App"],
+  },
+
+  {
+    id: 20,
     title: "Serenity Stretch",
     tags: ["HTML", "CSS", "Javascript"],
     url: "https://tuiliergit.github.io/Serenity-Stretch",
@@ -162,7 +307,7 @@ const LabProjects = [
     buttons: projectButtons["Serenity Stretch"],
   },
   {
-    id: 3,
+    id: 30,
     title: "Bubble Game",
     tags: ["HTML", "CSS", "JavaScript"],
     url: "https://tuiliergit.github.io/bubble-game/",
@@ -178,7 +323,7 @@ const LabProjects = [
     buttons: projectButtons["Bubble Game"],
   },
   {
-    id: 4,
+    id: 40,
     title: "Gaming Campus",
     tags: ["HTML", "CSS"],
     url: "https://tuiliergit.github.io/Gaming_Campus",
@@ -192,7 +337,7 @@ const LabProjects = [
     buttons: projectButtons["Gaming Campus"],
   },
   {
-    id: 5,
+    id: 50,
     title: "Password Generator",
     tags: ["HTML", "CSS", "Javascript"],
     url: "https://tuiliergit.github.io/Password-Generator",
@@ -204,7 +349,7 @@ const LabProjects = [
     buttons: projectButtons["Password Generator"],
   },
   {
-    id: 6,
+    id: 60,
     title: "To-Do List",
     tags: ["HTML", "CSS", "Javascript"],
     url: "https://tuiliergit.github.io/To-Do-List",
@@ -216,7 +361,7 @@ const LabProjects = [
     buttons: projectButtons["To-Do List"],
   },
   {
-    id: 7,
+    id: 70,
     title: "Run",
     tags: ["HTML", "CSS"],
     url: "https://tuiliergit.github.io/Run",
@@ -230,7 +375,22 @@ const LabProjects = [
     buttons: projectButtons["Run"],
   },
   {
-    id: 8,
+    id: 75,
+    title: "Tinder",
+    tags: ["HTML", "CSS", "Javascript"],
+    url: "https://tuiliergit.github.io/tinder",
+    body: `
+    Une version de Tinder réalisée en vanilla JavaScript. 
+    <br>
+    <br>
+    Les données des utilisateurs proviennent de l’API randomuser.me ; cependant, en raison de la mauvaise qualité des photos, celles-ci ont été remplacées par des photos de recettes provenant de l’API themealdb.com.
+    `,
+    mediaUrl: "./projects/project_tinder.png",
+    mediaType: "img",
+    buttons: projectButtons["Tinder"],
+  },
+  {
+    id: 80,
     title: "Flappy Bird",
     tags: ["HTML", "CSS", "Javascript"],
     url: "https://tuiliergit.github.io/Flappy-Bird",
@@ -245,7 +405,7 @@ const LabProjects = [
     buttons: projectButtons["Flappy Bird"],
   },
   {
-    id: 9,
+    id: 90,
     title: "Hiking Website",
     tags: ["HTML", "Sass"],
     url: "https://tuiliergit.github.io/Hiking_Website",
@@ -260,7 +420,7 @@ const LabProjects = [
     buttons: projectButtons["Hiking Website"],
   },
   {
-    id: 10,
+    id: 100,
     title: "The Resto",
     tags: ["HTML", "Sass"],
     url: "https://tuiliergit.github.io/The_Resto",
