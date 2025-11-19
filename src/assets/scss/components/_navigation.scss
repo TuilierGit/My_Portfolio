@@ -1,13 +1,21 @@
 @use "../settings" as *;
 
+.smallNav {
+  top: -130px !important;
+  // transform: translateY(-90px);
+}
+
 .navigation {
   display: flex;
   justify-content: space-between;
-
   height: auto;
   max-width: 1230px;
   width: 100%;
-  border: solid 1px $border-color;
+  background: $white;
+  border-bottom: solid 1px $border-color;
+  position: relative;
+  top: 0;
+  transition: 0.3s;
 
   .navigation-img {
     padding: 10px;

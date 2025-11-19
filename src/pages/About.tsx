@@ -20,7 +20,6 @@ const About = () => {
       body: "Jusqu'à présent, j'ai eu la chance de pouvoir faire deux stages en entreprise. Actuellement, je suis à la recherche d'un dernier stage de 6 mois afin de valider mes études. Si vous êtes intéressé par l'idée de travailler ensemble, n'hésitez pas à me contacter.",
     },
   ];
-
   return (
     <div className="page" style={{ minHeight: "100vh" }}>
       <Navigation />

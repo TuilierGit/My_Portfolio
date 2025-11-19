@@ -1,5 +1,5 @@
 import Button from "./Button";
-import { ProjectButton } from "./Projects";
+import { ProjectButton } from "./ProjectList";
 import Tag from "./Tag";
 
 interface Props {
@@ -22,7 +22,11 @@ const Project = ({
   buttons,
 }: Props) => {
   return (
-    <div className="project" id={title.replace(/ /g, "")}>
+    <div
+      className="project"
+      id={title.replace(/ /g, "")}
+      style={{ background: `url(${mediaUrl}) center/cover` }}
+    >
       <div className="project-container">
         <div className="left">
           <h2>{title}</h2>
@@ -51,21 +55,13 @@ const Project = ({
         </div>
 
         <div className="right">
-          {/* <div className="project-media"> */}
           {mediaType.toLowerCase() === "img" ? (
             <a
               href={url}
               className="project-media"
               style={{ background: `url(${mediaUrl}) center/cover` }}
               target="blank"
-            >
-              {/* <img
-              
-                  src={mediaUrl}
-                  alt={"Image de " + title}
-                  className="media"
-                /> */}
-            </a>
+            ></a>
           ) : mediaType.toLowerCase() === "video" ? (
             <a className="project-media" href={url} target="blank">
               <video
@@ -85,7 +81,6 @@ const Project = ({
               "Erreur sur la description du projet"
             </div>
           )}
-          {/* </div> */}
         </div>
       </div>
     </div>

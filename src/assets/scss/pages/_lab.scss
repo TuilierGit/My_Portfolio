@@ -1,0 +1,36 @@
+@use "../settings" as *;
+
+.labHeader {
+  #bigListButton,
+  #smallListButton {
+    color: $black;
+    position: absolute;
+    // right: 45px;
+    right: -60px;
+    cursor: pointer;
+    border: solid 1px $border-color;
+    border-radius: 5px;
+    padding: 5px;
+    transform: scale(1.5);
+    background: $lightgray;
+    transition: 0.2s;
+  }
+
+  #bigListButton {
+    top: 125px;
+  }
+
+  #smallListButton {
+    top: 200px;
+  }
+
+  #bigListButton.selected,
+  #smallListButton.selected {
+    background: $border-color;
+  }
+
+  #bigListButton:hover,
+  #smallListButton:hover {
+    transform: scale(1.7);
+  }
+}

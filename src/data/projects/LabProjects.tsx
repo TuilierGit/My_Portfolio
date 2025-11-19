@@ -1,12 +1,4 @@
 const projectButtons = {
-  Github: [
-    {
-      id: 1,
-      type: "github",
-      text: "",
-      url: "https://github.com/TuilierGit",
-    },
-  ],
   "Mon Portfolio": [
     {
       id: 1,
@@ -145,16 +137,6 @@ const projectButtons = {
 
 const LabProjects = [
   {
-    id: 0,
-    title: "Suite ...",
-    tags: [],
-    url: "https://github.com/TuilierGit",
-    body: `Intéressé pour découvrir d’autres projets ? N’hésitez pas à visiter mon GitHub, où vous trouverez de nombreux travaux tout aussi intéressants.`,
-    mediaUrl: "./projects/github.png",
-    mediaType: "img",
-    buttons: projectButtons["Github"],
-  },
-  {
     id: 1,
     title: "Mon Portfolio",
     tags: ["HTML", "Sass", "TypeScript", "React"],
@@ -169,6 +151,18 @@ const LabProjects = [
   },
   {
     id: 2,
+    title: "Serenity Stretch",
+    tags: ["HTML", "CSS", "Javascript"],
+    url: "https://tuiliergit.github.io/Serenity-Stretch",
+    body: `
+      Site Web en HTML/CSS et vanilla JavaScript permettant de réaliser des exercices de yoga.
+      `,
+    mediaUrl: "./projects/project_serenityStretch.png",
+    mediaType: "img",
+    buttons: projectButtons["Serenity Stretch"],
+  },
+  {
+    id: 3,
     title: "Bubble Game",
     tags: ["HTML", "CSS", "JavaScript"],
     url: "https://tuiliergit.github.io/bubble-game/",
@@ -177,12 +171,14 @@ const LabProjects = [
       <br>
       <br> 
       Ce projet permet d'explorer les différents mécanismes d'interaction avec le <strong>DOM (Document Object Model)</strong> en JavaScript.`,
-    mediaUrl: "./projects/project_bubbleGame.webm",
-    mediaType: "video",
+    mediaUrl: "./projects/project_bubbleGame.png",
+    mediaType: "img",
+    // mediaUrl: "./projects/project_bubbleGame.webm",
+    // mediaType: "video",
     buttons: projectButtons["Bubble Game"],
   },
   {
-    id: 3,
+    id: 4,
     title: "Gaming Campus",
     tags: ["HTML", "CSS"],
     url: "https://tuiliergit.github.io/Gaming_Campus",
@@ -196,7 +192,7 @@ const LabProjects = [
     buttons: projectButtons["Gaming Campus"],
   },
   {
-    id: 4,
+    id: 5,
     title: "Password Generator",
     tags: ["HTML", "CSS", "Javascript"],
     url: "https://tuiliergit.github.io/Password-Generator",
@@ -208,7 +204,7 @@ const LabProjects = [
     buttons: projectButtons["Password Generator"],
   },
   {
-    id: 5,
+    id: 6,
     title: "To-Do List",
     tags: ["HTML", "CSS", "Javascript"],
     url: "https://tuiliergit.github.io/To-Do-List",
@@ -218,18 +214,6 @@ const LabProjects = [
     mediaUrl: "./projects/project_toDoList.png",
     mediaType: "img",
     buttons: projectButtons["To-Do List"],
-  },
-  {
-    id: 6,
-    title: "Serenity Stretch",
-    tags: ["HTML", "CSS", "Javascript"],
-    url: "https://tuiliergit.github.io/Serenity-Stretch",
-    body: `
-      Site Web en HTML/CSS et vanilla JavaScript permettant de réaliser des exercices de yoga.
-      `,
-    mediaUrl: "./projects/project_serenityStretch.png",
-    mediaType: "img",
-    buttons: projectButtons["Serenity Stretch"],
   },
   {
     id: 7,

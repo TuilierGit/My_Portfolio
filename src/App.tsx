@@ -3,12 +3,14 @@ import About from "./pages/About";
 import Error404 from "./pages/Error404";
 import Home from "./pages/Home";
 import Lab from "./pages/Lab";
+import Projects from "./pages/Projects";
 
 const App = () => {
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/projects" element={<Projects />} />
         <Route path="/lab" element={<Lab />} />
         <Route path="/about" element={<About />} />
         <Route path="*" element={<Error404 />} />

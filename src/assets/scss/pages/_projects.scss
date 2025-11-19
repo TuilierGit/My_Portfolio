@@ -1,0 +1,24 @@
+@use "../settings" as *;
+
+.mainProjectList {
+  .item {
+    .project {
+      margin: 50px 50px 20px;
+      cursor: pointer;
+    }
+
+    .title {
+      @include verticalCenter;
+
+      h2 {
+        margin: 5px 0 60px;
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+#finatrac-project .project {
+  background: url(../../../../public/projects/project_gamingCampus.png)
+    center/cover;
+}

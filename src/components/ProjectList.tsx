@@ -19,11 +19,22 @@ export interface Project {
 
 interface Props {
   projects: Project[];
+  listStyle: string;
 }
 
-const Projects = ({ projects }: Props) => {
+const ProjectList = ({ projects, listStyle }: Props) => {
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     setVisiblePresentation(true);
+  //   }, 1000);
+
+  //   setTimeout(() => {
+  //     setVisiblePicture(true);
+  //   }, 1500);
+  // }, []);
+
   return (
-    <div className="projects">
+    <div id="projetList" className={"projects " + listStyle}>
       {projects
         .sort((a, b) => b.id - a.id)
         .map((project) => (
@@ -42,4 +53,4 @@ const Projects = ({ projects }: Props) => {
   );
 };
 
-export default Projects;
+export default ProjectList;

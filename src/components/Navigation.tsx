@@ -7,12 +7,25 @@ interface Props {
 
 const Navigation = ({ transition = false }: Props) => {
   const [visible, setVisible] = useState(false);
+  const [oldScrollY, setOldScrollY] = useState(0);
+  const navbar = document.querySelector(".navigation");
 
   useEffect(() => {
     setTimeout(() => {
       setVisible(true);
-    }, 500);
+    }, 200);
   }, []);
+
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > oldScrollY) {
+        navbar?.classList.add("smallNav");
+      } else {
+        navbar?.classList.remove("smallNav");
+      }
+      setOldScrollY(window.scrollY);
+    });
+  }, [navbar, oldScrollY, setOldScrollY]);
 
   return (
     <div
@@ -34,6 +47,14 @@ const Navigation = ({ transition = false }: Props) => {
         >
           <li>Home</li>
         </NavLink>
+
+        <NavLink
+          to={"/projects"}
+          className={(nav) => (nav.isActive ? "nav-active" : "")}
+        >
+          <li>Projects</li>
+        </NavLink>
+
         <NavLink
           to={"/lab"}
           className={(nav) => (nav.isActive ? "nav-active" : "")}
@@ -41,12 +62,12 @@ const Navigation = ({ transition = false }: Props) => {
           <li>Lab</li>
         </NavLink>
 
-        <NavLink
+        {/* <NavLink
           to={"/about"}
           className={(nav) => (nav.isActive ? "nav-active" : "")}
         >
           <li>About</li>
-        </NavLink>
+        </NavLink> */}
 
         <a href="/CV_Tuilier_Thomas.pdf" target="_blank">
           <li>CV</li>

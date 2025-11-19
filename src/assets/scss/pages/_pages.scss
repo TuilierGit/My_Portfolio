@@ -3,9 +3,10 @@
 .page {
   display: block;
   min-height: 100vh;
-  background: $white;
+  background: $bg-color-1;
   border: solid 1px $border-color;
   border-bottom: 0;
+  position: relative;
 
   @media (min-width: 1251px) {
     width: 1232px;
