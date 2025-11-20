@@ -1,0 +1,61 @@
+.newVisibility {
+  animation: workVisibilityAnim 0.7s linear forwards;
+}
+
+@keyframes workVisibilityAnim {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.lastVisibility {
+  animation: lastVisibilityAnim 0.7s linear forwards;
+}
+
+@keyframes lastVisibilityAnim {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.backgroundItem {
+  .textContainer {
+    position: absolute;
+    top: 30px;
+    left: 60px;
+    width: 430px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    h3 {
+      font-size: 1.8rem;
+    }
+    h4 {
+      font-size: 1.3rem;
+    }
+    p {
+      text-align: justify;
+    }
+  }
+
+  .imgContainer {
+    position: absolute;
+    right: 60px;
+    top: 20px;
+    height: 300px;
+    display: flex;
+    align-items: center;
+
+    img {
+      width: 160px;
+    }
+  }
+}

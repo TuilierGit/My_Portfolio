@@ -1,5 +1,9 @@
 @use "../settings" as *;
 
+.mainProjectList {
+  margin: 127px 0 0;
+}
+
 .mainProjectList,
 .projects.bigProjectList {
   .project {

@@ -5,7 +5,7 @@ import Footer from "../components/Footer";
 import Navigation from "../components/Navigation";
 import ProjectList from "../components/ProjectList";
 import LabProjects from "../data/projects/LabProjects";
-import Contact from "../layout/Contact";
+import Contact from "../layouts/Contact";
 
 const Lab = () => {
   const [currentListStyle, setCurrentListStyle] =
@@ -34,17 +34,31 @@ const Lab = () => {
     <div className="page">
       <Navigation />
       <div className="labHeader">
-        <div className="left"></div>
-        <div className="right">
-          <div id="bigListButton">
-            <BsList />
-          </div>
-          <div id="smallListButton" className="selected">
-            <LuLayoutGrid />
-          </div>
+        <h1>Le Lab</h1>
+        <div>
+          <p>
+            Le Lab a pour objectif de rassembler divers mini-projets, tels que
+            des jeux, des outils ou encore des modèles de sites web.
+          </p>
+          <p>
+            Je réalise ces mini-projets avant tout comme des exercices pratiques
+            pour renforcer mes compétences en front-end comme en back-end. J’ai
+            souhaité créer cet espace au sein de mon portfolio afin de les
+            partager. Ces projets, souvent réalisés en seulement quelques heures
+            de développement, n’ont pas vocation à être particulièrement
+            ambitieux, mais illustrent mon envie d’expérimenter et d’apprendre
+            continuellement.
+          </p>
         </div>
       </div>
-      <div id="test"></div>
+      <div className="labViewButtons">
+        <div id="bigListButton">
+          <BsList />
+        </div>
+        <div id="smallListButton" className="selected">
+          <LuLayoutGrid />
+        </div>
+      </div>
       <ProjectList projects={LabProjects} listStyle={currentListStyle} />
       <div
         style={{

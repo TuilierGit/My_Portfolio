@@ -2,10 +2,6 @@
 
 .page.home-page {
   background: #fafafa;
-  .navigation {
-    z-index: 10;
-    position: fixed;
-  }
 }
 
 .home-presentation {
@@ -65,7 +61,7 @@
   }
 
   .left {
-    z-index: 1;
+    z-index: 20;
     width: 600px;
     display: flex;
     flex-direction: column;
@@ -217,6 +213,7 @@
       gap: 20px;
 
       li {
+        cursor: pointer;
         display: flex;
         background: #f3f3f3;
         padding: 15px 90px;
@@ -224,10 +221,15 @@
         color: #595959;
         font-size: 1.2rem;
         justify-content: space-between;
+        transition: 0.3s;
         box-shadow: rgba(0, 0, 0, 0.11) 0px 0.597144px 0.597144px -1px,
           rgba(0, 0, 0, 0.1) 0px 1.81088px 1.81088px -2px,
           rgba(0, 0, 0, 0.09) 0px 4.78699px 4.78699px -3px,
           rgba(0, 0, 0, 0.03) 0px 15px 15px -4px;
+
+        &:hover {
+          transform: scale(1.05);
+        }
 
         div {
           width: fit-content;
@@ -293,8 +295,15 @@
 .bubble {
   position: absolute;
   border-radius: 1000px;
-  background: $border-color;
+  // background: $border-color;
   z-index: 3;
+  background: repeating-linear-gradient(
+    /* angle des lignes */ 315deg,
+    /* couleur des lignes */ #111 0.5px,
+    /* épaisseur des lignes */ #111 0.5px,
+    transparent 2px,
+    /* espacement entre lignes */ transparent 6px
+  );
 }
 
 #bubble-1 {
@@ -302,7 +311,8 @@
   top: 150px;
   width: 100px;
   height: 100px;
-  animation: visibility 50s linear forwards;
+  animation: visibility 4s linear forwards;
+  // animation: visibility 50s linear forwards;
 }
 
 #bubble-2 {
@@ -310,7 +320,8 @@
   top: 700px;
   width: 150px;
   height: 150px;
-  animation: visibility 100s linear forwards;
+  animation: visibility 6s linear forwards;
+  // animation: visibility 100s linear forwards;
 }
 
 #bubble-3 {
@@ -318,7 +329,8 @@
   top: 700px;
   width: 50px;
   height: 50px;
-  animation: visibility 150s linear forwards;
+  animation: visibility 8s linear forwards;
+  // animation: visibility 150s linear forwards;
 }
 
 #bubble-4 {
@@ -326,51 +338,14 @@
   top: 250px;
   width: 80px;
   height: 80px;
-  animation: visibility 200s linear forwards;
-}
-
-.line {
-  position: absolute;
-  border-radius: 1000px;
-  background: $black;
-  height: 4px;
-  z-index: 2;
-}
-
-#line-1 {
-  top: 800px;
-  left: 90px;
-  width: 150px;
-  transform: rotate(45deg);
-  animation: visibility 250s linear forwards;
-}
-
-#line-2 {
-  top: 730px;
-  right: -24px;
-  width: 420px;
-  transform: rotate(310deg);
-  animation: visibility 300s linear forwards;
-}
-
-#line-3 {
-  top: 126px;
-  left: 169px;
-  width: 50px;
-  transform: rotate(336deg);
-  animation: visibility 350s linear forwards;
-}
-
-#line-4 {
-  top: 157px;
-  right: 169px;
-  width: 300px;
-  transform: rotate(19deg);
-  animation: visibility 400s linear forwards;
+  animation: visibility 10s linear forwards;
+  // animation: visibility 200s linear forwards;
 }
 
 #last-visible-box {
-  background: $border-color;
+  // background: $border-color;
+  background: #f7f7f7;
+  border: solid 1px $border-color-2;
   width: 760px;
   height: 450px;
   border-radius: 25px;
@@ -378,8 +353,9 @@
   left: 50%;
   top: 447px;
   transform: translate(-50%, -50%);
-  z-index: 0;
-  animation: visibility 450s linear forwards;
+  z-index: 15;
+  animation: visibility 12s linear forwards;
+  // animation: visibility 450s linear forwards;
 }
 
 @keyframes visibility {

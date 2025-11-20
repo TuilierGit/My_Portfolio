@@ -1,6 +1,6 @@
 @use "../settings" as *;
 
-.smallNav {
+.hiddenNav {
   top: -130px !important;
   // transform: translateY(-90px);
 }
@@ -13,9 +13,10 @@
   width: 100%;
   background: $white;
   border-bottom: solid 1px $border-color;
-  position: relative;
+  position: fixed;
   top: 0;
   transition: 0.3s;
+  z-index: 50;
 
   .navigation-img {
     padding: 10px;

@@ -28,7 +28,10 @@ const Footer = () => {
             </a>
           </li>
           <li>
-            <a href="/CV_Tuilier_Thomas.pdf" target="_blank">
+            <a
+              href="https://drive.google.com/file/d/1TXn-Z2s2SLggE0Y9r1649IPOcB0UkOfP/view?usp=sharing"
+              target="_blank"
+            >
               <VscChevronRight />
               Mon CV
             </a>

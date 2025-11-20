@@ -19,9 +19,9 @@ const Navigation = ({ transition = false }: Props) => {
   useEffect(() => {
     window.addEventListener("scroll", () => {
       if (window.scrollY > oldScrollY) {
-        navbar?.classList.add("smallNav");
+        navbar?.classList.add("hiddenNav");
       } else {
-        navbar?.classList.remove("smallNav");
+        navbar?.classList.remove("hiddenNav");
       }
       setOldScrollY(window.scrollY);
     });
@@ -69,7 +69,10 @@ const Navigation = ({ transition = false }: Props) => {
           <li>About</li>
         </NavLink> */}
 
-        <a href="/CV_Tuilier_Thomas.pdf" target="_blank">
+        <a
+          href="https://drive.google.com/file/d/1TXn-Z2s2SLggE0Y9r1649IPOcB0UkOfP/view?usp=sharing"
+          target="_blank"
+        >
           <li>CV</li>
         </a>
       </ul>

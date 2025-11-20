@@ -293,7 +293,21 @@ const LabProjects = [
     mediaType: "img",
     buttons: projectButtons["JS Flag App"],
   },
-
+  {
+    id: 17,
+    title: "Tinder",
+    tags: ["HTML", "CSS", "Javascript"],
+    url: "https://tuiliergit.github.io/tinder",
+    body: `
+    Une version de Tinder réalisée en vanilla JavaScript. 
+    <br>
+    <br>
+    Les données des utilisateurs proviennent de l’API randomuser.me ; cependant, en raison de la mauvaise qualité des photos, celles-ci ont été remplacées par des photos de recettes provenant de l’API themealdb.com.
+    `,
+    mediaUrl: "./projects/project_tinder.png",
+    mediaType: "img",
+    buttons: projectButtons["Tinder"],
+  },
   {
     id: 20,
     title: "Serenity Stretch",
@@ -373,21 +387,6 @@ const LabProjects = [
     mediaUrl: "./projects/project_run.png",
     mediaType: "img",
     buttons: projectButtons["Run"],
-  },
-  {
-    id: 75,
-    title: "Tinder",
-    tags: ["HTML", "CSS", "Javascript"],
-    url: "https://tuiliergit.github.io/tinder",
-    body: `
-    Une version de Tinder réalisée en vanilla JavaScript. 
-    <br>
-    <br>
-    Les données des utilisateurs proviennent de l’API randomuser.me ; cependant, en raison de la mauvaise qualité des photos, celles-ci ont été remplacées par des photos de recettes provenant de l’API themealdb.com.
-    `,
-    mediaUrl: "./projects/project_tinder.png",
-    mediaType: "img",
-    buttons: projectButtons["Tinder"],
   },
   {
     id: 80,

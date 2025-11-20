@@ -30,6 +30,10 @@ const ToolList = () => {
         <h4>Docker</h4>
       </li>
       <li>
+        <img src="./logos/kubernetes.png" alt="kubernetes-logo" />
+        <h4>Kubernetes</h4>
+      </li>
+      <li>
         <img src="./logos/gitlab.png" alt="gitlab-logo" />
         <h4>Gitlab</h4>
       </li>
