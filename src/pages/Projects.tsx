@@ -7,7 +7,7 @@ const Lab = () => {
       <Navigation />
       <div className="mainProjectList">
         <div id="finatrac-project" className="item">
-          <div className="project"></div>
+          <a href="https://finatrac.com" className="project" target="blank"></a>
           <div className="title">
             <h2>Projet : Finatrac</h2>
           </div>
