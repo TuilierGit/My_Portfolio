@@ -55,13 +55,16 @@ const Contact = () => {
     if (!hasErrors && !hasEmptyFields) {
       console.log(formData);
       const urlEncoded = new URLSearchParams(formData).toString();
-      await fetch("http://localhost:5000/portfolio/message", {
-        method: "POST",
-        body: urlEncoded,
-        headers: {
-          "Content-type": "application/x-www-form-urlencoded",
-        },
-      })
+      await fetch(
+        "https://message-form-backend-qzki.onrender.com/portfolio/message",
+        {
+          method: "POST",
+          body: urlEncoded,
+          headers: {
+            "Content-type": "application/x-www-form-urlencoded",
+          },
+        }
+      )
         .then((res) => {
           console.log(res);
           if (res.status !== 200) {
