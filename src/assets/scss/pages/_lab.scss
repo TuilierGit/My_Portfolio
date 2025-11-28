@@ -1,64 +1,95 @@
 @use "../settings" as *;
 
-.labHeader {
-  margin: 110px 10% 25px;
+.labPage {
+  .labHeader {
+    margin: 110px 10% 25px;
 
-  h1 {
-    font-size: 4rem;
-    margin: 0 0 15px;
-  }
-  p {
-    text-align: justify;
-  }
+    @media (max-width: $size-2) {
+      text-align: center;
+    }
 
-  div {
-    position: relative;
-    margin: 0 0 60px;
+    h1 {
+      font-size: 4rem;
+      margin: 0 0 15px;
+    }
+    p {
+      text-align: justify;
 
-    &::after {
-      position: absolute;
-      content: "";
-      transform: translate(-50%, -50%);
-      height: 1px;
-      background: $border-color-2;
-      width: 100%;
-      left: 50%;
-      bottom: -27px;
+      @media (max-width: $size-2) {
+        text-align: center;
+      }
+    }
+
+    div {
+      position: relative;
+      margin: 0 0 60px;
+
+      &::after {
+        position: absolute;
+        content: "";
+        transform: translate(-50%, -50%);
+        height: 1px;
+        background: $border-color-2;
+        width: 100%;
+        left: 50%;
+        bottom: -27px;
+      }
     }
   }
-}
 
-.labViewButtons {
-  #bigListButton,
-  #smallListButton {
-    color: $black;
-    position: absolute;
-    // right: 45px;
-    right: -60px;
-    cursor: pointer;
-    border: solid 1px $border-color;
-    border-radius: 5px;
-    padding: 5px;
-    transform: scale(1.5);
+  .labBanner {
     background: $lightgray;
-    transition: 0.2s;
+    padding: 25px 5%;
+    margin: 25px 0 0;
+    border-top: solid 1px $border-color-2;
+    border-bottom: solid 1px $border-color-2;
+
+    @media (max-width: $size-2) {
+      text-align: center;
+    }
   }
 
-  #bigListButton {
-    top: 125px;
-  }
+  .labViewButtons {
+    @media (max-width: $size-1) {
+      @include centerChild;
+      gap: 50px;
+      margin: 0 0 40px;
+    }
 
-  #smallListButton {
-    top: 200px;
-  }
+    #bigListButton,
+    #smallListButton {
+      color: $black;
+      cursor: pointer;
+      border: solid 1px $border-color;
+      border-radius: 5px;
+      padding: 5px;
+      transform: scale(1.5);
+      background: $lightgray;
+      transition: 0.2s;
 
-  #bigListButton.selected,
-  #smallListButton.selected {
-    background: $border-color;
-  }
+      @media (min-width: calc($size-1 + 1px)) {
+        position: absolute;
+        // right: 45px;
+        right: -60px;
+      }
+    }
 
-  #bigListButton:hover,
-  #smallListButton:hover {
-    transform: scale(1.7);
+    #bigListButton {
+      top: 125px;
+    }
+
+    #smallListButton {
+      top: 200px;
+    }
+
+    #bigListButton.selected,
+    #smallListButton.selected {
+      background: $border-color;
+    }
+
+    #bigListButton:hover,
+    #smallListButton:hover {
+      transform: scale(1.7);
+    }
   }
 }

@@ -86,142 +86,72 @@ const Contact = () => {
   };
 
   return (
-    <section className="contact-part" style={{ margin: "30px 5%" }}>
+    <section className="contactSection">
       <h2>Contact</h2>
       <p>
         Intéressé pour travailler ensemble ? Vous pouvez me contacter en
         m’envoyant un message via le formulaire ci-dessous.
       </p>
-      <form
-        onSubmit={handleSubmit}
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-        }}
-      >
-        <div
-          className="form-container"
-          style={{
-            display: "grid",
-            gridTemplateColumns: "1fr 1fr",
-            gridTemplateAreas: '"name email" "subject subject" "text text"',
-            gap: "25px",
-            margin: "0 0 25px",
-            width: "80%",
-          }}
-        >
+      <form onSubmit={handleSubmit}>
+        <div className="formContainer">
           <div
             style={{
-              display: "flex",
-              flexDirection: "column",
               gridArea: "name",
             }}
           >
-            <label
-              style={{ margin: "0 0 5px", fontSize: "1.1rem" }}
-              htmlFor="fullName"
-            >
-              Nom et Prénom
-            </label>
+            <label htmlFor="fullName">Nom et Prénom</label>
             <input
               type="name"
               id="fullName"
               autoComplete="none"
-              style={{
-                padding: "10px 25px",
-                borderRadius: "10px",
-              }}
               value={formData["fullName"]}
               onChange={handleChange}
             />
-            <span style={{ color: "red", fontSize: "0.9rem" }}>
-              {errors["fullName"]}
-            </span>
+            <span>{errors["fullName"]}</span>
           </div>
           <div
             style={{
-              display: "flex",
-              flexDirection: "column",
               gridArea: "email",
             }}
           >
-            <label
-              htmlFor="email"
-              style={{ margin: "0 0 5px", fontSize: "1.1rem" }}
-            >
-              Email
-            </label>
+            <label htmlFor="email">Email</label>
             <input
               type="email"
               id="email"
-              style={{
-                padding: "10px 25px",
-                borderRadius: "10px",
-              }}
               value={formData["email"]}
               onChange={handleChange}
             />
-            <span style={{ color: "red", fontSize: "0.9rem" }}>
-              {errors["email"]}
-            </span>
+            <span>{errors["email"]}</span>
           </div>
           <div
             style={{
-              display: "flex",
-              flexDirection: "column",
               gridArea: "subject",
             }}
           >
-            <label
-              htmlFor="subject"
-              style={{ margin: "0 0 5px", fontSize: "1.1rem" }}
-            >
-              Sujet du message
-            </label>
+            <label htmlFor="subject">Sujet du message</label>
             <input
               type="text"
               id="subject"
               autoComplete="none"
-              style={{
-                padding: "10px 25px",
-                borderRadius: "10px",
-              }}
               value={formData["subject"]}
               onChange={handleChange}
             />
-            <span style={{ color: "red", fontSize: "0.9rem" }}>
-              {errors["subject"]}
-            </span>
+            <span>{errors["subject"]}</span>
           </div>
           <div
             style={{
-              display: "flex",
-              flexDirection: "column",
               gridArea: "text",
             }}
           >
-            <label
-              htmlFor="message"
-              style={{ margin: "0 0 5px", fontSize: "1.1rem" }}
-            >
-              Contenu du message
-            </label>
+            <label htmlFor="message">Contenu du message</label>
             <input
               type="text"
               id="message"
               autoComplete="none"
-              style={{
-                padding: "10px 25px",
-                borderRadius: "10px",
-                minHeight: "250px",
-              }}
               value={formData["message"]}
               onChange={handleChange}
             />
-            <span style={{ color: "red", fontSize: "0.9rem" }}>
-              {errors["message"]}
-            </span>
+            <span>{errors["message"]}</span>
           </div>
         </div>
         <input
@@ -230,32 +160,6 @@ const Contact = () => {
           className="strong-button"
         />
       </form>
-      {/* <div
-        style={{
-          border: "solid 1px lightgray",
-          padding: "25px 5%",
-          margin: "25px 0 0",
-          borderRadius: "15px",
-          display: "none",
-        }}
-      >
-        <h4>Mon Mail</h4>
-        <p style={{ margin: "30px 0 20px" }}>
-          Si vous préférez éviter les formulaires mais souhaitez tout de même collaborer avec moi, aucune inquiétude : vous pouvez me contacter directement par e-mail. Il vous suffit d’utiliser le bouton ci-dessous, qui ouvrira votre messagerie par défaut.
-        </p>
-        <div
-          style={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-          }}
-        >
-          <Strong
-            url="mailto:thomas.tuilier@gmail.com"
-            text="Envoyer directement un mail"
-          />
-        </div>
-      </div> */}
     </section>
   );
 };

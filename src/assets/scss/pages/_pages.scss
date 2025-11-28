@@ -12,7 +12,7 @@
     width: 1232px;
   }
 
-  @media (max-width: 1250px) {
+  @media (max-width: $size-1) {
     width: 100%;
   }
 
@@ -24,7 +24,7 @@
       width: 70%;
     }
 
-    @media (max-width: 1251px) {
+    @media (max-width: $size-1) {
       width: 85%;
     }
   }

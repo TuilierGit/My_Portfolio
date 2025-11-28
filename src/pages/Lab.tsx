@@ -31,7 +31,7 @@ const Lab = () => {
   }, [currentListStyle, setCurrentListStyle]);
 
   return (
-    <div className="page">
+    <div className="page labPage">
       <Navigation />
       <div className="labHeader">
         <h1>Le Lab</h1>
@@ -60,15 +60,7 @@ const Lab = () => {
         </div>
       </div>
       <ProjectList projects={LabProjects} listStyle={currentListStyle} />
-      <div
-        style={{
-          background: "#fafafa",
-          padding: "25px 5%",
-          margin: "25px 0 0",
-          borderTop: "solid 1px lightgray",
-          borderBottom: "solid 1px lightgray",
-        }}
-      >
+      <div className="labBanner">
         <h3>La suite ?</h3>
         <p>
           Vous souhaitez découvrir d’autres projets ? Rendez-vous sur mon GitHub

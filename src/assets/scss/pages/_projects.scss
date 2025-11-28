@@ -8,7 +8,7 @@
     }
 
     .title {
-      @include verticalCenter;
+      @include centerChild;
 
       h2 {
         margin: 5px 0 60px;

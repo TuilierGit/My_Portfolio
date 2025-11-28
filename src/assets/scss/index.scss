@@ -6,6 +6,8 @@
 @use "./pages/projects";
 @use "./pages/error404";
 @use "./pages/about";
+@use "./layouts/contact";
+@use "./layouts/work";
 @use "./layouts/background";
 @use "./components/project";
 @use "./components/tag";

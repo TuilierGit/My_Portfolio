@@ -25,9 +25,15 @@ $color-2: $lightgray;
 $border-color: #ebebeb;
 $border-color-2: lightgray;
 
+// ===================== Size =======================
+
+$size-1: 1250px;
+$size-2: 810px;
+$size-3: 601px;
+
 // ====================================================
 
-@mixin verticalCenter {
+@mixin centerChild {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -49,9 +55,10 @@ $border-color-2: lightgray;
 body {
   background: linear-gradient($white, $color-2);
   font-family: $font-1;
+  // overflow-x: hidden !important;
 
-  @media (min-width: 1251px) {
-    @include verticalCenter;
+  @media (min-width: calc($size-1 + 1px)) {
+    @include centerChild;
   }
 }
 
@@ -68,5 +75,5 @@ li {
 }
 
 .center-child {
-  @include verticalCenter;
+  @include centerChild;
 }

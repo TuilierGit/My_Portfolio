@@ -1,0 +1,56 @@
+@use "../settings" as *;
+
+.workSection {
+  .workTitle {
+    @include centerChild;
+    margin-top: 30px;
+    padding: 70px 0;
+    border-top: solid 1px $border-color-2;
+    border-bottom: solid 1px $border-color-2;
+    text-transform: uppercase;
+    background: $white;
+    text-decoration: overline;
+  }
+
+  .workContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "projets lab" "steps steps";
+    border-bottom: solid 1px $border-color-2;
+    background: $white;
+
+    @media (max-width: $size-2) {
+      grid-template-areas:
+        "projets projets"
+        "lab lab"
+        "steps steps";
+    }
+
+    .workProjectPart {
+      margin: 35px 0;
+      padding: 25px 5%;
+      border-right: solid 1px $border-color-2;
+      grid-area: projets;
+      text-align: center;
+
+      @media (max-width: $size-2) {
+        border-right: none;
+        border-bottom: solid 1px $border-color-2;
+      }
+    }
+
+    .workLabPart {
+      margin: 35px 0;
+      text-align: center;
+      padding: 25px 5%;
+      grid-area: lab;
+    }
+
+    .workToolPart {
+      background: $white;
+      border-top: solid 1px $border-color-2;
+      grid-area: steps;
+      padding: 25px 5%;
+    }
+  }
+}

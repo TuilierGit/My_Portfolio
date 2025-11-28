@@ -42,7 +42,7 @@ const Home = () => {
                 Envie de collaborer sur un projet ? Contactez-moi.
               </p>
             </div>
-            <div>
+            <div className="button-container">
               <Strong
                 url="mailto:thomas.tuilier@gmail.com"
                 text="Contactez-moi"
