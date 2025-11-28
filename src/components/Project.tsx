@@ -4,6 +4,7 @@ import Tag from "./Tag";
 
 interface Props {
   title: string;
+  classString?: string;
   tags: string[];
   url: string;
   body: string;
@@ -14,6 +15,7 @@ interface Props {
 
 const Project = ({
   title,
+  classString,
   tags,
   url,
   body,
@@ -23,7 +25,7 @@ const Project = ({
 }: Props) => {
   return (
     <div
-      className="project"
+      className={classString ? "project " + classString : "project"}
       id={title.replace(/ /g, "")}
       style={{ background: `url(${mediaUrl}) center/cover` }}
     >

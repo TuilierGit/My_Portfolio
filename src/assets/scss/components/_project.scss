@@ -9,8 +9,10 @@
   .project {
     border: solid 1px $border-color;
     margin: 50px;
-    background: white;
     transition: 0.3s;
+    &.labProject {
+      background: white !important;
+    }
 
     @media (min-width: 1251px) {
       height: 630px;

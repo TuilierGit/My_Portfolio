@@ -40,6 +40,7 @@ const ProjectList = ({ projects, listStyle }: Props) => {
         .map((project) => (
           <Project
             key={project.id}
+            classString="labProject"
             title={project.title}
             tags={project.tags}
             url={project.url}
