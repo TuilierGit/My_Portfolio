@@ -26,7 +26,7 @@ const Home = () => {
           }
         >
           <div className="presentation-container">
-            <h1>Tuilier Thomas</h1>
+            <h1>Thomas Tuilier</h1>
             <div>
               <p
                 style={{

@@ -25,7 +25,7 @@ const About = () => {
       <Navigation />
 
       <div className="page-container about-container">
-        <h1>Tuilier Thomas</h1>
+        <h1>Thomas Tuilier</h1>
         <p>
           Jeune ingénieur bientôt diplômé, je suis passionné par l'informatique
           et tout ce qui est créatif. Actuellement basé près de Bordeaux,

@@ -45,7 +45,7 @@ const Footer = () => {
         </ul>
       </div>
       <div>
-        <p>© 2025 Tuilier Thomas.</p>
+        <p>© 2025 Thomas Tuilier.</p>
         <p>Tous droits réservés.</p>
         <p>Site fait par mes soins.</p>
       </div>
