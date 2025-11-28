@@ -9,7 +9,7 @@
   .project {
     border: solid 1px $border-color;
     margin: 50px;
-    background: white !important;
+    background: white;
     transition: 0.3s;
 
     @media (min-width: 1251px) {

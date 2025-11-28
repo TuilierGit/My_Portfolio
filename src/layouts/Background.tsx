@@ -48,7 +48,12 @@ const Background = () => {
   const backgroundHtml = useMemo<JSX.Element>(
     () => (
       <>
-        <div className="topBackground"></div>
+        <div
+          className="topBackground"
+          style={{
+            background: "url(office.jpg) center / cover",
+          }}
+        ></div>
         <div className="portrait">
           <img src="./photo.jpg" alt="portrait" />
         </div>
